@@ -1,0 +1,35 @@
+<div class="container">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %>
+    </div>
+  <% end %>
+</div>
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to EventBrite</h1>
+  <p class="lead">Ce site te permet de créer et de rejoindre des évènements de ta ville facilement.</p>
+  <hr class="my-4">
+  <p>Pour créer un évènement c'est par ici :</p>
+  <p class="lead">
+    <div class="btn btn-success">
+  		<%= link_to 'Je crée mon Event !', new_event_path, :class => "btn" %>
+  	</div>
+  </p>
+</div>
+
+<div class='mx-auto' style="width: 400px;height: 80px;">
+<h2>Liste des Events :</h2>
+</div>
+
+<div class='card-columns'>
+	<% @events.each do |event| %>
+		<div class="card bg-secondary" style="width: 22rem;">
+		  <!-- <img src="..." class="card-img-top" alt="..."> -->
+		  <div class="card-body">
+		    <h5 class="card-title"><a class="text-warning"><%= link_to event.title.upcase , event_path(event.id)%></a></h5>
+		    	<p class="text-light">Déposé par : <a class="text-warning"><%= link_to event.administrator.first_name , user_path(event.administrator.id)%></a></p>
+		  </div>
+		</div>
+	 <% end %>
+</div>
