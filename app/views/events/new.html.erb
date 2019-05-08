@@ -1,6 +1,6 @@
 <div class="jumbotron bg-secondary">
     <div class="mx-auto" style="width: 400px;">
-        <h1>Création d'Event</h1>
+        <h1>Create Event</h1>
     </div>
 </div>
 
@@ -10,7 +10,7 @@
 <div class='container'>
     <%= form_tag url_for(action: 'create'), method: "post" do %>
 
-    <p>Merci de renseigner les champs suivants :</p>
+    <p>Fill the following champs :</p>
     <div class="col-sm-6">
         <%= text_field_tag 'title', "", class: "form-control", placeholder: "Titre"%>
     </div><br>

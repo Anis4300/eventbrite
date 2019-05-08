@@ -8,12 +8,12 @@
 
 <div class="jumbotron">
   <h1 class="display-4">Welcome to EventBrite</h1>
-  <p class="lead">Ce site te permet de créer et de rejoindre des évènements de ta ville facilement.</p>
+  <p class="lead">Our website shows you the nearest events in your town or the one you're visiting. You can also create your own event.</p>
   <hr class="my-4">
-  <p>Pour créer un évènement c'est par ici :</p>
+  <p>Click the button bellow to create an event :</p>
   <p class="lead">
-    <div class="btn btn-success">
-  		<%= link_to 'Je crée mon Event !', new_event_path, :class => "btn" %>
+    <div class="btn btn-info">
+  		<%= link_to 'Organize an event !', new_event_path, :class => "btn" %>
   	</div>
   </p>
 </div>
@@ -24,7 +24,7 @@
 
 <div class='card-columns'>
 	<% @events.each do |event| %>
-		<div class="card bg-secondary" style="width: 22rem;">
+		<div class="card bg-info style="width: 22rem;">
 		  <!-- <img src="..." class="card-img-top" alt="..."> -->
 		  <div class="card-body">
 		    <h5 class="card-title"><a class="text-warning"><%= link_to event.title.upcase , event_path(event.id)%></a></h5>
