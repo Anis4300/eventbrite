@@ -1,24 +1,10 @@
-# README
+# EventBrite : Local and Worldwide events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to use:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ 1. Git clone/download this repo
+ 2. Bundle install
+ 3. If you want to try this app on a local, please run 'rails db:drop db:create db:migrate'
+ 4. To try it on Heroku follow this link : https://anis-event.herokuapp.com/
+ 
+ By Anis Bouhouche.
